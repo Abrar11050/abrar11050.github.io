@@ -1,0 +1,49 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<style>
+  @font-face {
+    font-family: myFirstFont;
+    src: url(Roboto-Thin.ttf);
+}
+#time {
+	font-family: myFirstFont;
+	color: #E4E4E4;
+	text-align: center;
+	font-size: 320%;
+	padding: 40px 0px 0px 0px;
+}
+#date {
+	font-family: myFirstFont;
+	color: #E4E4E4;
+	text-align: center;
+	font-size: 100%;
+}
+body {
+	background-image: -webkit-linear-gradient(60deg, #B2008D, #C3012F);
+}
+</style>
+<script src="moment.min.js"></script>
+<div>
+<p id="time"></p>
+<p id="date"></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<script>
+	    function timer() {
+		document.getElementById("time").innerHTML = moment().format('LTS');
+		document.getElementById("date").innerHTML = moment().format('L');
+	    }
+		setInterval('timer()',100);
+</script>
+</body>
